@@ -47,6 +47,14 @@ The `output` directory will then contain the following:
 
 All audio will have its loudness normalized according to the default settings of ffmpeg-normalize and all images and videos will be rescaled to 1920x1440.
 
+For each row of the CSV file, if there is a value in Video, it will be used.
+If there is no Video but there is both a Slide and an Audio, they will be used.
+Otherwise, a warning will be printed and the row will be skipped.
+
+When converting a PowerPoint slide, if Slide Number is blank, the first slide will be used.
+If Slide Number is a number, that slide will be used (counting from 1).
+If Slide Number is a list of N pipe-separated timestamps, the first N slides will be used, each beginning at the corresponding time. (Note that the initial `0:00` is required and any slides that appear multiple times in the video must also appear multiple times in the PowerPoint.)
+
 ## TODO
 
 Currently, most of the format conversion happens in the final concatenation step, so it's the most intensive (LCC11 was concatenating 105 clips into a 97 minute video and got up to 8.6 GB of RAM).
