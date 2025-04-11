@@ -23,7 +23,7 @@ Create a CSV file with the following format:
 | 2c | Bob | bob.pptx | | bob_commentary.mp3 | | Torch 2 |
 | 2t | Bob | bob.pptx | | bob_reading.mp3 | | |
 | 3 | Carol | | | | carol.mp4 | Torch 3 |
-| 4 | David | david.pptx | `0:00|0:12|0:40` | david.wav | | Torch 4 |
+| 4 | David | david.pptx | `0:00\|0:12\|0:40` | david.wav | | Torch 4 |
 
 Then, in the directory where those files are (or from which the paths are valid), run:
 
